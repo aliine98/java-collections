@@ -13,5 +13,18 @@ public class Main {
         System.out.println("----Depois de remover----");
         System.out.println("Total de tarefas: " + lt.getTotalTarefas());
         lt.getDescricoesTarefas();
+
+        System.out.println("\n ----------------------------------- \n");
+
+        Cart cart = new Cart();
+        cart.addItem("Notebook",6000.00,1);
+        cart.addItem("Notebook",6000.00,1);
+        cart.addItem("Fone de ouvido",20.00,2);
+        cart.showItems();
+        System.out.println("Preço total:" + cart.getTotalPrice());
+        cart.removeItem("notebook");
+        System.out.println("-----Depois de remover-----");
+        cart.showItems();
+        System.out.println("Preço total:" + cart.getTotalPrice());
     }
 }
