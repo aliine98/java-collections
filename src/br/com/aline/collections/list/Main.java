@@ -26,5 +26,18 @@ public class Main {
         System.out.println("-----Depois de remover-----");
         cart.showItems();
         System.out.println("Preço total:" + cart.getTotalPrice());
+
+        System.out.println("\n ----------------------------------- \n");
+
+        BooksCatalog bc = new BooksCatalog();
+        bc.addBook("Teste","Aline",2022);
+        bc.addBook("Teste","Aline",2021);
+        bc.addBook("Teste2","Aline",2024);
+        bc.addBook("Teste","Aline2",2024);
+        bc.addBook("Teste2","Aline2",2023);
+        System.out.println(bc.searchByAuthor("aline"));
+        System.out.println(bc.searchByTitle("teste1"));
+        System.out.println(bc.searchByPubYear(2024));
+        System.out.println(bc.searchByYearInterval(2021,2023));
     }
 }
