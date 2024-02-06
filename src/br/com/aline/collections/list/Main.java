@@ -39,5 +39,24 @@ public class Main {
         System.out.println(bc.searchByTitle("teste1"));
         System.out.println(bc.searchByPubYear(2024));
         System.out.println(bc.searchByYearInterval(2021,2023));
+
+        System.out.println("\n ----------------------------------- \n");
+
+        NumberList nl = new NumberList();
+        nl.addNumber(1);
+        nl.addNumber(-1);
+        nl.addNumber(2);
+        nl.addNumber(3);
+        nl.addNumber(4);
+        nl.addNumber(5);
+        nl.addNumber(6);
+        nl.addNumber(7);
+        nl.addNumber(8);
+        nl.addNumber(9);
+        nl.addNumber(10);
+        System.out.println(nl.showNumbers());
+        System.out.println(nl.findMax());
+        System.out.println(nl.findMin());
+        System.out.println(nl.sumList());
     }
 }
