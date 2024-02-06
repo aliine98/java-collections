@@ -58,5 +58,16 @@ public class Main {
         System.out.println(nl.findMax());
         System.out.println(nl.findMin());
         System.out.println(nl.sumList());
+
+        System.out.println("\n ----------------------------------- \n");
+
+        PeopleSort ps = new PeopleSort();
+        ps.addPerson("Aline",25,1.57);
+        ps.addPerson("Thiago",23,1.75);
+        ps.addPerson("Heloisa",18,1.60);
+        ps.addPerson("Lucas",24,1.80);
+        System.out.println("Unsorted: " + ps.getPersonList());
+        System.out.println("Sort by age: " + ps.sortByAge());
+        System.out.println("Sort by height: " + ps.sortByHeight());
     }
 }
