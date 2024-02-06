@@ -69,5 +69,17 @@ public class Main {
         System.out.println("Unsorted: " + ps.getPersonList());
         System.out.println("Sort by age: " + ps.sortByAge());
         System.out.println("Sort by height: " + ps.sortByHeight());
+
+        System.out.println("\n ----------------------------------- \n");
+
+        NumbersSort ns = new NumbersSort();
+        ns.addNumber(3);
+        ns.addNumber(1);
+        ns.addNumber(4);
+        ns.addNumber(2);
+        ns.addNumber(5);
+        System.out.println(ns.getIntegerList());
+        System.out.println(ns.sortAscending());
+        System.out.println(ns.sortDescending());
     }
 }
