@@ -42,5 +42,31 @@ public class Main {
         cb.updateContactNumber("aline",444444444);
         System.out.println("Depois de mudar número");
         System.out.println(cb.getContactSet());
+
+        System.out.println("\n ----------------------------------- \n");
+
+        TaskList tl = new TaskList();
+        tl.addTask("Tarefa 1");
+        tl.addTask("Tarefa 2");
+        tl.addTask("Tarefa 3");
+        System.out.println("Task count: " + tl.getTaskCount());
+        System.out.println("task set: " + tl.getTaskSet());
+        System.out.println("Pending: " + tl.getPendingTasks());
+        System.out.println("Finished: " + tl.getFinishedTasks());
+        tl.markTaskAsCompleted("tarefa 1");
+        tl.markTaskAsCompleted("tarefa 2");
+        System.out.println("Finished: " + tl.getFinishedTasks());
+        System.out.println("Pending: " + tl.getPendingTasks());
+        tl.removeTask("tarefa 2");
+        System.out.println("Task count: " + tl.getTaskCount());
+        System.out.println("task set: " + tl.getTaskSet());
+        tl.markTaskAsPending("tarefa 1");
+        System.out.println("Finished: " + tl.getFinishedTasks());
+        System.out.println("Pending: " + tl.getPendingTasks());
+        tl.clearTaskList();
+        System.out.println("Task count: " + tl.getTaskCount());
+        System.out.println("task set: " + tl.getTaskSet());
+
+
     }
 }
