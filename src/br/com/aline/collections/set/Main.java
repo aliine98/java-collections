@@ -23,5 +23,24 @@ public class Main {
         System.out.println(wc.getUniqueWordsSet());
         wc.removeWord("aline");
         System.out.println(wc.getUniqueWordsSet());
+
+        System.out.println("\n ----------------------------------- \n");
+
+        ContactBook cb = new ContactBook();
+
+        cb.addContact("Aline",999999999);
+        cb.addContact("Aline 2",555555555);
+        cb.addContact("Igor",888888888);
+        cb.addContact("Thiago",777777777);
+        cb.addContact("Thiago 2",666666666);
+        System.out.println(cb.getContactSet());
+        System.out.println("Há contato com nome 'aline'? " + cb.searchByName("aline"));
+        System.out.println("Há contato com nome 'vitória'? " + cb.searchByName("vitória"));
+        cb.removeContact("thiago 2");
+        System.out.println("Depois de remover:");
+        System.out.println(cb.getContactSet());
+        cb.updateContactNumber("aline",444444444);
+        System.out.println("Depois de mudar número");
+        System.out.println(cb.getContactSet());
     }
 }
