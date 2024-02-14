@@ -1,5 +1,7 @@
 package br.com.aline.collections.set;
 
+import br.com.aline.collections.set.product_register.ProductRegister;
+
 public class Main {
     public static void main(String[] args) {
         GuestSet gs = new GuestSet();
@@ -67,6 +69,15 @@ public class Main {
         System.out.println("Task count: " + tl.getTaskCount());
         System.out.println("task set: " + tl.getTaskSet());
 
+        System.out.println("\n ----------------------------------- \n");
 
+        ProductRegister pr = new ProductRegister();
+        pr.addProduct("notebook",74557,6000.00,1);
+        pr.addProduct("notebook",74557,6000.00,1);
+        pr.addProduct("fone de ouvido",585266,35.00,2);
+        pr.addProduct("celular",1190,1200.00,1);
+        System.out.println(pr.getProductSet());
+        System.out.println(pr.sortByName());
+        System.out.println(pr.sortByPrice());
     }
 }
