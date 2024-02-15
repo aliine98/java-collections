@@ -1,5 +1,12 @@
 package br.com.aline.collections.list;
 
+import br.com.aline.collections.list.book_catalog.BooksCatalog;
+import br.com.aline.collections.list.cart.Cart;
+import br.com.aline.collections.list.number_list.NumberList;
+import br.com.aline.collections.list.numbers_sort.NumbersSort;
+import br.com.aline.collections.list.people_sort.PeopleSort;
+import br.com.aline.collections.list.task_list.ListaTarefas;
+
 public class Main {
     public static void main(String[] args) {
         ListaTarefas lt = new ListaTarefas();

@@ -1,4 +1,4 @@
-package br.com.aline.collections.set;
+package br.com.aline.collections.set.task_list;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -6,11 +6,11 @@ import java.util.Set;
 public class TaskList {
     private Set<Task> taskSet = new HashSet<>();
 
-    void addTask(String description) {
+    public void addTask(String description) {
         taskSet.add(new Task(description));
     }
 
-    void removeTask(String description) {
+    public void removeTask(String description) {
         Task taskToRemove = null;
         for (Task t : taskSet) {
             if(t.getDescription().equalsIgnoreCase(description)) {
@@ -20,15 +20,15 @@ public class TaskList {
         taskSet.remove(taskToRemove);
     }
 
-    Set<Task> getTaskSet() {
+    public Set<Task> getTaskSet() {
         return taskSet;
     }
 
-    int getTaskCount() {
+    public int getTaskCount() {
         return  taskSet.size();
     }
 
-    Set<Task> getFinishedTasks() {
+    public Set<Task> getFinishedTasks() {
         Set<Task> finishedTasks = new HashSet<>();
         for (Task t : taskSet) {
             if(t.isDone()) {
@@ -38,7 +38,7 @@ public class TaskList {
         return  finishedTasks;
     }
 
-    Set<Task> getPendingTasks() {
+    public Set<Task> getPendingTasks() {
         Set<Task> pendingTasks = new HashSet<>();
         for (Task t : taskSet) {
             if(!t.isDone()) {
@@ -48,7 +48,7 @@ public class TaskList {
         return  pendingTasks;
     }
 
-    void markTaskAsCompleted(String description) {
+    public void markTaskAsCompleted(String description) {
         for (Task t : taskSet) {
             if (t.getDescription().equalsIgnoreCase(description)) {
                 t.setDone(true);
@@ -56,7 +56,7 @@ public class TaskList {
         }
     }
 
-    void markTaskAsPending(String description) {
+    public void markTaskAsPending(String description) {
         for (Task t : taskSet) {
             if (t.getDescription().equalsIgnoreCase(description)) {
                 t.setDone(false);
@@ -64,7 +64,7 @@ public class TaskList {
         }
     }
 
-    void clearTaskList() {
+    public void clearTaskList() {
         taskSet.clear();
     }
 }

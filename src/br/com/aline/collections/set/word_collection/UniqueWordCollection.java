@@ -1,4 +1,4 @@
-package br.com.aline.collections.set;
+package br.com.aline.collections.set.word_collection;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -6,11 +6,11 @@ import java.util.Set;
 public class UniqueWordCollection {
     Set<String> wordSet = new HashSet<>();
 
-    void addWord(String word) {
+    public void addWord(String word) {
         wordSet.add(word);
     }
 
-    void removeWord(String word) {
+    public void removeWord(String word) {
         String wordToRemove = "";
         for (String w : wordSet) {
             if(w.equalsIgnoreCase(word)) {
@@ -20,7 +20,7 @@ public class UniqueWordCollection {
         wordSet.remove(wordToRemove);
     }
 
-    boolean contains(String word) {
+    public boolean contains(String word) {
         boolean isPresent = false;
         for (String w : wordSet) {
             if (w.equalsIgnoreCase(word)) {
@@ -31,7 +31,7 @@ public class UniqueWordCollection {
         return isPresent;
     }
 
-    Set<String> getUniqueWordsSet() {
+    public Set<String> getUniqueWordsSet() {
         return wordSet;
     }
 }

@@ -1,4 +1,4 @@
-package br.com.aline.collections.set;
+package br.com.aline.collections.set.guest_set;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -6,15 +6,15 @@ import java.util.Set;
 public class GuestSet {
     private Set<Guest> guestSet = new HashSet<>();
 
-    void addGuest(String name, int inviteCode) {
+    public void addGuest(String name, int inviteCode) {
         this.guestSet.add(new Guest(name, inviteCode));
     }
 
-    Set<Guest> getGuestSet() {
+    public Set<Guest> getGuestSet() {
         return guestSet;
     }
 
-    void removeByInviteCode(int inviteCode) {
+    public void removeByInviteCode(int inviteCode) {
         Set<Guest> guestsToRemove = new HashSet<>();
         for (Guest g : guestSet) {
             if(g.getInviteCode() == inviteCode) {
@@ -24,7 +24,7 @@ public class GuestSet {
         guestSet.removeAll(guestsToRemove);
     }
 
-    int countGuests() {
+    public int countGuests() {
         return guestSet.size();
     }
 }

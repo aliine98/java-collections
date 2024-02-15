@@ -1,4 +1,4 @@
-package br.com.aline.collections.list;
+package br.com.aline.collections.list.cart;
 
 public class Item {
     private String name;

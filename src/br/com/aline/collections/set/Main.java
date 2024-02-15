@@ -1,7 +1,11 @@
 package br.com.aline.collections.set;
 
+import br.com.aline.collections.set.contact_book.ContactBook;
+import br.com.aline.collections.set.guest_set.GuestSet;
 import br.com.aline.collections.set.product_register.ProductRegister;
 import br.com.aline.collections.set.students.StudentList;
+import br.com.aline.collections.set.task_list.TaskList;
+import br.com.aline.collections.set.word_collection.UniqueWordCollection;
 
 public class Main {
     public static void main(String[] args) {

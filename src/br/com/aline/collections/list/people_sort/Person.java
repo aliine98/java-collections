@@ -1,6 +1,4 @@
-package br.com.aline.collections.list;
-
-import java.util.Comparator;
+package br.com.aline.collections.list.people_sort;
 
 public class Person implements Comparable<Person> {
     private String name;
@@ -37,24 +35,5 @@ public class Person implements Comparable<Person> {
     @Override
     public int compareTo(Person p) {
         return Integer.compare(age,p.getAge());
-    }
-}
-
-class ComparatorByHeight implements Comparator<Person> {
-
-    @Override
-    public int compare(Person p1, Person p2) {
-        return Double.compare(p1.getHeight(),p2.getHeight());
-
-        /*
-            implementação do compare e compareTo
-                if(p1.getHeight() > p2.getHeight()) {
-                    return 1;
-                } else if (p1.getHeight() < p2.getHeight()) {
-                    return -1;
-                } else {
-                    return 0;
-                }
-        */
     }
 }

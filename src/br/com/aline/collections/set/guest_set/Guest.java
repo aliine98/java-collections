@@ -1,4 +1,4 @@
-package br.com.aline.collections.set;
+package br.com.aline.collections.set.guest_set;
 
 public class Guest {
     private String name;

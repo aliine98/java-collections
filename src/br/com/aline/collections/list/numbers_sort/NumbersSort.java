@@ -1,4 +1,4 @@
-package br.com.aline.collections.list;
+package br.com.aline.collections.list.numbers_sort;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -8,7 +8,7 @@ import java.util.List;
 public class NumbersSort {
     List<Integer> integerList = new ArrayList<>();
 
-    void addNumber(int num) {
+    public void addNumber(int num) {
         this.integerList.add(num);
     }
 
@@ -23,13 +23,13 @@ public class NumbersSort {
                 '}';
     }
 
-    List<Integer> sortAscending() {
+    public List<Integer> sortAscending() {
         List<Integer> sortedList = new ArrayList<>(integerList);
         Collections.sort(sortedList);
         return sortedList;
     }
 
-    List<Integer> sortDescending() {
+    public List<Integer> sortDescending() {
         List<Integer> sortedList = new ArrayList<>(integerList);
         //              pega o oposto da ordem natural(que neste caso é crescente, logo o oposto é decrescente)
         sortedList.sort(Collections.reverseOrder());

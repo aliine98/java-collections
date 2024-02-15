@@ -1,4 +1,4 @@
-package br.com.aline.collections.list;
+package br.com.aline.collections.list.number_list;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,11 +6,11 @@ import java.util.List;
 public class NumberList {
     private final List<Integer> integerList = new ArrayList<>();
 
-    void addNumber(int number) {
+    public void addNumber(int number) {
         integerList.add(number);
     }
 
-    int sumList() {
+    public int sumList() {
         int sum = 0;
         for (int num : integerList) {
             sum += num;
@@ -18,7 +18,7 @@ public class NumberList {
         return sum;
     }
 
-    int findMax() {
+    public int findMax() {
         int max = Integer.MIN_VALUE;
 
         for (int num : integerList) {
@@ -29,7 +29,7 @@ public class NumberList {
         return max;
     }
 
-    int findMin() {
+    public int findMin() {
         int min = Integer.MAX_VALUE;
 
         for (int num : integerList) {
@@ -40,7 +40,7 @@ public class NumberList {
         return min;
     }
 
-    List<Integer> showNumbers() {
+    public List<Integer> showNumbers() {
         return this.integerList;
     }
 }

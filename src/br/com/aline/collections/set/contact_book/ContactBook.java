@@ -1,4 +1,4 @@
-package br.com.aline.collections.set;
+package br.com.aline.collections.set.contact_book;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -6,11 +6,11 @@ import java.util.Set;
 public class ContactBook {
     private Set<Contact> contactSet = new HashSet<>();
 
-    void addContact(String name, int phonenumber) {
+    public void addContact(String name, int phonenumber) {
         contactSet.add(new Contact(name, phonenumber));
     }
 
-    Set<Contact> searchByName(String name) {
+    public Set<Contact> searchByName(String name) {
         Set<Contact> contactsFound = new HashSet<>();
 
         for (Contact c : contactSet) {
@@ -22,7 +22,7 @@ public class ContactBook {
         return contactsFound;
     }
 
-    void updateContactNumber(String name, int phoneNumber) {
+    public void updateContactNumber(String name, int phoneNumber) {
         for (Contact c : contactSet) {
             if (c.getName().equalsIgnoreCase(name)) {
                 c.setPhoneNumber(phoneNumber);
@@ -30,7 +30,7 @@ public class ContactBook {
         }
     }
 
-    void removeContact(String name) {
+    public void removeContact(String name) {
         Contact contactToRemove = null;
         for (Contact c : contactSet) {
             if(c.getName().equalsIgnoreCase(name)) {
@@ -40,7 +40,7 @@ public class ContactBook {
         contactSet.remove(contactToRemove);
     }
 
-    Set<Contact> getContactSet() {
+    public Set<Contact> getContactSet() {
         return contactSet;
     }
 }

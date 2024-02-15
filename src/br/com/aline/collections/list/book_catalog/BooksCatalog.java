@@ -1,4 +1,4 @@
-package br.com.aline.collections.list;
+package br.com.aline.collections.list.book_catalog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,11 +6,11 @@ import java.util.List;
 public class BooksCatalog {
     private final List<Book> bookList = new ArrayList<>();
 
-    void addBook(String title, String author, int pubYear) {
+    public void addBook(String title, String author, int pubYear) {
         this.bookList.add(new Book(title, author, pubYear));
     }
 
-    List<Book> searchByAuthor(String author) {
+    public List<Book> searchByAuthor(String author) {
         List<Book> matchedBooks = new ArrayList<>();
 
         for (Book book : bookList) {
@@ -22,7 +22,7 @@ public class BooksCatalog {
         return matchedBooks;
     }
 
-    Book searchByTitle(String title) {
+    public Book searchByTitle(String title) {
         Book matchedBook = null;
 
         for (Book book : bookList) {
@@ -35,7 +35,7 @@ public class BooksCatalog {
         return matchedBook;
     }
 
-    List<Book> searchByPubYear(int year) {
+    public List<Book> searchByPubYear(int year) {
         List<Book> matchedBooks = new ArrayList<>();
 
         for (Book book : bookList) {
@@ -47,7 +47,7 @@ public class BooksCatalog {
         return matchedBooks;
     }
 
-    List<Book> searchByYearInterval(int initialYear, int finalYear) {
+    public List<Book> searchByYearInterval(int initialYear, int finalYear) {
         List<Book> matchedBooks = new ArrayList<>();
 
         for (Book book : bookList) {

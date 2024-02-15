@@ -1,4 +1,4 @@
-package br.com.aline.collections.list;
+package br.com.aline.collections.list.book_catalog;
 
 public class Book {
     private final String author;

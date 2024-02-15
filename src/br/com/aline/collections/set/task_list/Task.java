@@ -1,4 +1,4 @@
-package br.com.aline.collections.set;
+package br.com.aline.collections.set.task_list;
 
 public class Task {
     private String description;

@@ -1,4 +1,4 @@
-package br.com.aline.collections.set;
+package br.com.aline.collections.set.contact_book;
 
 public class Contact {
     private String name;
