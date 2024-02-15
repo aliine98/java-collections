@@ -1,6 +1,7 @@
 package br.com.aline.collections.set;
 
 import br.com.aline.collections.set.product_register.ProductRegister;
+import br.com.aline.collections.set.students.StudentList;
 
 public class Main {
     public static void main(String[] args) {
@@ -79,5 +80,17 @@ public class Main {
         System.out.println(pr.getProductSet());
         System.out.println(pr.sortByName());
         System.out.println(pr.sortByPrice());
+
+        System.out.println("\n ----------------------------------- \n");
+
+        StudentList sl = new StudentList();
+        sl.addStudent("lucas",6,9.5);
+        sl.addStudent("carol",65,7.5);
+        sl.addStudent("aline",60,8.5);
+        System.out.println(sl.getStudentSet());
+        System.out.println(sl.sortByName());
+        System.out.println(sl.sortByGradeAverage());
+        sl.removeStudent(65);
+        System.out.println("Depois de remover: " + sl.getStudentSet());
     }
 }
